@@ -13,6 +13,7 @@ pub use self::cauchy::Cauchy;
 pub use self::chi::Chi;
 pub use self::chi_squared::ChiSquared;
 pub use self::dirac::Dirac;
+#[cfg(feature = "nalgebra")]
 pub use self::dirichlet::Dirichlet;
 pub use self::discrete_uniform::DiscreteUniform;
 pub use self::empirical::Empirical;
@@ -25,7 +26,9 @@ pub use self::hypergeometric::Hypergeometric;
 pub use self::inverse_gamma::InverseGamma;
 pub use self::laplace::Laplace;
 pub use self::log_normal::LogNormal;
+#[cfg(feature = "nalgebra")]
 pub use self::multinomial::Multinomial;
+#[cfg(feature = "nalgebra")]
 pub use self::multivariate_normal::MultivariateNormal;
 pub use self::negative_binomial::NegativeBinomial;
 pub use self::normal::Normal;
@@ -44,6 +47,7 @@ mod cauchy;
 mod chi;
 mod chi_squared;
 mod dirac;
+#[cfg(feature = "nalgebra")]
 mod dirichlet;
 mod discrete_uniform;
 mod empirical;
@@ -58,7 +62,9 @@ mod internal;
 mod inverse_gamma;
 mod laplace;
 mod log_normal;
+#[cfg(feature = "nalgebra")]
 mod multinomial;
+#[cfg(feature = "nalgebra")]
 mod multivariate_normal;
 mod negative_binomial;
 mod normal;
